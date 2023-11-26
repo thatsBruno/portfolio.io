@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap 5 example</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script type="module" src="./src/index.js"></script>
+  </head>
+  <!-- Navbar -->
+  <div class="div">
+    <ul class="nav justify-content-center">
+      <img
+        class="photo"
+        src="https://avatars.githubusercontent.com/u/28793603?v=4"
+        alt="profile img"
+      />
+      <li class="nav-item">
+        <a class="nav-link active" href="#">// experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">// biography</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">// contacts</a>
+      </li>
+    </ul>
+  </div>
+  <!-- Body -->
+  <body>
+    <!-- title -->
+    <div class="title">
+      <h1>BRUNO RIBEIRO</h1>
+      <h3>Software Engineer</h3>
+      <p>
+        Hi, I'm Bruno, a software engineer working as a fullstack web-app
+        developer with a focus in problem solving and software arquitecture!
+      </p>
+    </div>
+    <!-- colaborations -->
+    <div class="colaborations">
+      <img src="/Siemens-Logo.png" class="logo" alt="siemens" />
+      <img src="/nokia.png" class="logo" alt="nokia" />
+    </div>
+    <!-- Experience -->
+    <div class="experience">
+      <h3><span class="experience-title">Experience</span></h3>
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="Basic example"
+        aria-valuenow="25"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar w-75" style="width: 82%">Typescript</div>
+      </div>
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="Basic example"
+        aria-valuenow="50"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar" style="width: 80%">C#</div>
+      </div>
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="Basic example"
+        aria-valuenow="75"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar" style="width: 60%">Java</div>
+      </div>
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="Basic example"
+        aria-valuenow="100"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar" style="width: 64%">CI/CD</div>
+      </div>
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="Basic example"
+        aria-valuenow="100"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar" style="width: 77%">Unit testing</div>
+      </div>
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="Basic example"
+        aria-valuenow="100"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar" style="width: 80%">Agile methodologies</div>
+      </div>
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="Basic example"
+        aria-valuenow="100"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar" style="width: 73%">Problem solving</div>
+      </div>
+    </div>
+    <!-- Projects -->
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 m-4">
+      <div class="col">
+        <div class="card">
+          <a href="https://github.com/thatsBruno/Botzilla" target="_blank"
+            ><img src="discord-bot.jpeg" class="card-img-top" alt="discord bot"
+          /></a>
+          <div class="card-body h-100">
+            <h5 class="card-title">Botzila</h5>
+            <span class="card-text">
+              A Discord bot application, written with DiscordJS library, that
+              allows personalized commands in the server its invited to.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <a
+            href="https://github.com/thatsBruno/ProductStore-BE"
+            target="_blank"
+          >
+            <img
+              src="products-app2.jpeg"
+              class="card-img-top"
+              alt="products app"
+            />
+          </a>
+          <div class="card-body h-100">
+            <h5 class="card-title">Ecommerce app backend.</h5>
+            <span class="card-text">
+              A Ecommerce app, written in .NET 7 with the basics CRUD api
+              features and using SQL.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <a
+            href="https://github.com/thatsBruno/ProductStore-FE"
+            target="_blank"
+          >
+            <img
+              src="products-app.jpeg"
+              class="card-img-top"
+              alt="products app"
+            />
+          </a>
+          <div class="card-body h-100">
+            <h5 class="card-title">Ecommerce app frontend.</h5>
+            <span class="card-text">
+              A Ecommerce app, written in Angular 16 with the basics CRUD
+              services features.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- Footer -->
+  <footer>
+    <div class="contacts">
+      <div class="contacts-img">
+        <a href="https://github.com/thatsBruno" target="_blank">
+          <img src="/github.png" class="logo-contacts" alt="github"
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/brunodasilvaribeiro"
+          target="_blank"
+        >
+          <img src="/logo-linkedin.png" class="logo-contacts" alt="linkedin" />
+        </a>
+      </div>
+      <div class="contacts-text">
+        Feel free to contact me throught either of my socials.
+      </div>
+    </div>
+  </footer>
+</html>

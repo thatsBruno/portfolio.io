@@ -1,0 +1,183 @@
+// Customizing Bootstrap with Sass variables:
+// https://getbootstrap.com/docs/5.0/customize/sass/
+
+// $primary: #276fc2;
+// $secondary: #e8d21d;
+// $border-radius: 1px;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500;1,800&family=Roboto:ital,wght@0,500;1,300;1,900&family=Space+Mono:wght@700&display=swap');
+
+body {
+  background: #16161a;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: ivory;
+  font-family: 'Roboto', sans-serif;
+}
+
+.div {
+  padding: 1rem;
+}
+
+.nav-link {
+  color: ivory;
+}
+
+.photo {
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: auto;
+}
+
+@media (max-width: 600px) {
+  .photo {
+    margin-right: 0;
+  }
+}
+
+.progress {
+  margin: 0.5rem;
+}
+
+.title {
+  margin-top: 8rem;
+  margin-bottom: 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-family: 'Space Mono', monospace;
+    font-weight: 900;
+    background-image: linear-gradient(
+      135deg,
+      rgb(102, 126, 234) 0%,
+      rgb(118, 75, 162) 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+  }
+
+  h3 {
+    color: #7f5af0;
+    font-style: italic;
+  }
+}
+
+p {
+  margin-top: 20rem;
+  font-family: 'Space Mono', monospace;
+  font-style: italic;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.colaborations {
+  background-image: linear-gradient(
+    135deg,
+    rgb(102, 126, 234) 0%,
+    rgb(118, 75, 162) 100%
+  );
+  height: 3.5rem;
+  width: 100%;
+  margin: 0rem 0 5rem 0;
+  padding-left: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: auto;
+    filter: brightness(0) invert(1);
+  }
+}
+
+.experience {
+  margin-top: 5rem;
+  margin: auto;
+  max-width: 30%;
+  min-width: 300px;
+  margin-bottom: 5rem;
+
+  h3 {
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.experience-title {
+  background-image: linear-gradient(
+    135deg,
+    rgb(102, 126, 234) 0%,
+    rgb(118, 75, 162) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+}
+
+.progress-bar {
+  background-color: #7f5af0;
+}
+
+.card-title {
+  font-family: 'Space Mono', monospace;
+}
+
+.contacts {
+  background-image: linear-gradient(
+    135deg,
+    rgb(102, 126, 234) 0%,
+    rgb(118, 75, 162) 100%
+  );
+  height: 10rem;
+  margin-top: 10rem;
+  width: 100%;
+  padding-left: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contacts-img {
+  height: 3rem;
+  width: 30%;
+  margin-left: auto;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: auto;
+    margin-left: auto;
+  }
+
+  @media (max-width: 600px) {
+    img {
+      padding-bottom: 1rem;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.contacts-text {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+@media (max-width: 600px) {
+  .contacts-text {
+    margin-right: 1.5rem;
+  }
+}
