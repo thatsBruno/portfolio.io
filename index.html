@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bootstrap 5 example</title>
+    <title>Bruno Ribeiro</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <script type="module" src="./src/index.js"></script>
-    <link href="src/styles.css" rel="stylesheet">
+    <link href="src/style.css" rel="stylesheet">
   </head>
   <!-- Navbar -->
-  <div class="div">
+  <div class="div" id="top">
     <ul class="nav justify-content-center">
       <img
         class="photo"
@@ -16,23 +16,24 @@
         alt="profile img"
       />
       <li class="nav-item">
-        <a class="nav-link active" href="#">// experience</a>
+        <a class="nav-link active" href="#experience">// experience</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">// biography</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">// contacts</a>
+        <a class="nav-link" href="#contacts">// contacts</a>
       </li>
     </ul>
   </div>
   <!-- Body -->
   <body>
+  <button click="topFunction()" id="topButton" title="Go to top">Top</button>
     <!-- title -->
     <div class="title">
       <h1>BRUNO RIBEIRO</h1>
       <h3>Software Engineer</h3>
-      <p>
+      <p id="experience">
         Hi, I'm Bruno, a software engineer working as a fullstack web-app
         developer with a focus in problem solving and software arquitecture!
       </p>
@@ -43,7 +44,7 @@
       <img src="/nokia.png" class="logo" alt="nokia" />
     </div>
     <!-- Experience -->
-    <div class="experience">
+    <div class="experience" >
       <h3><span class="experience-title">Experience</span></h3>
       <div
         class="progress"
@@ -179,7 +180,7 @@
   </body>
   <!-- Footer -->
   <footer>
-    <div class="contacts">
+    <div class="contacts" id="contacts">
       <div class="contacts-img">
         <a href="https://github.com/thatsBruno" target="_blank">
           <img src="/github.png" class="logo-contacts" alt="github"
@@ -192,7 +193,7 @@
         </a>
       </div>
       <div class="contacts-text">
-        Feel free to contact me throught either of my socials.
+        Feel free to contact me through either one of my socials.
       </div>
     </div>
   </footer>
