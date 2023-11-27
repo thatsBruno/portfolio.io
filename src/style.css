@@ -11971,30 +11971,29 @@ p {
   padding-left: 0 !important;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column;
 }
 
+.contacts-links {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  width: 100%;
+}
 .contacts-links a {
   font-family: "Roboto", sans-serif;
   text-decoration: none;
   color: inherit;
-  font-weight: 500;
-  width: 100%;
 }
 
 .contacts-text {
-  justify-self: center;
-  align-self: center;
   text-align: center;
   width: 100%;
+  font-weight: bold;
 }
 
-@media (max-width: 600px) {
-  .contacts-text {
-    margin-right: 1.5rem;
-  }
-}
 #topButton {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
