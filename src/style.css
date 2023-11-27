@@ -11980,12 +11980,14 @@ p {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
+  width: 100%;
 }
 
 .contacts-text {
   justify-self: center;
   align-self: center;
   text-align: center;
+  width: 100%;
 }
 
 @media (max-width: 600px) {
