@@ -70,8 +70,21 @@ body {
   }
 }
 
+.engineer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 20rem;
+  margin-top: 8rem;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
 p {
-  margin-top: 30rem;
+  margin-top: 10rem;
   font-family: 'Space Mono', monospace;
   font-style: italic;
   text-align: center;
