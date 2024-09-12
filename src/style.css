@@ -12048,21 +12048,39 @@ p {
 #topButton {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  left: 20px; /* Place the button 20px from the left */
+  bottom: 30px; /* Place the button 30px from the bottom */
+  right: 30px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: #555; /* Set a background color */
-  color: white; /* Text color */
+  background-color: rgba(0, 0, 0, 0.76); /* Semi-transparent dark background */
+  color: #fff; /* White color for the arrow */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  padding: 12px; /* Adjust padding for better appearance */
+  border-radius: 10%; /* Circular button */
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.315); /* Enhanced shadow for depth */
+  transition: transform 0.3s, background-color 0.3s; /* Smooth transitions */
+  animation: bounce 2s infinite; /* Add bounce animation */
 }
 
 #topButton:hover {
-  background-color: #444; /* Add a dark-grey background on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  background-color: rgba(0, 0, 0, 0.9); /* Darker background on hover */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Start and end at original position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up */
+  }
+}
+
+#topButton::after {
+  content: '↑'; /* Arrow for the button */
+  font-size: 24px; /* Increase arrow size */
+  line-height: 1; /* Center the arrow vertically */
 }
 
 #stars {
