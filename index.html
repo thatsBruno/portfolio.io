@@ -281,6 +281,13 @@
             border-radius: 5px;
             /* Optional: add rounded corners */
         }
+
+        .tech-label {
+            display: block; /* Ensure it takes a new line */
+            margin-top: 10px; /* Add some space above */
+            font-weight: bold; /* Make it bold */
+            color: #88C0D0; /* Match the color with the theme */
+        }
     </style>
 </head>
 
@@ -392,6 +399,8 @@
                         Peer to peer microservice written in Go, utilizing TCP transport methods for files.
                         <br> Currently work in progress...
                     </small>
+                    <!-- Moved technologies to the bottom -->
+                    <small class="tech-label">Technologies: Go, TCP</small> <!-- Added class for styling -->
                 </div>
             </div>
             <div class="project">
@@ -407,6 +416,7 @@
                         Lessons, Users, and Enrollment models. <br>
                         REST API as connection point.
                     </small>
+                    <small class="tech-label">Technologies: Java, Spring Boot, REST</small> <!-- Added class for styling -->
                 </div>
             </div>
             <div class="project">
@@ -424,6 +434,7 @@
                         about 13k rows, however this model only reached 59.81 RSquared with FastForestRegression since
                         the dataset I had was small.
                     </small>
+                    <small class="tech-label">Technologies: ML.NET, C#</small> <!-- Added class for styling -->
                 </div>
             </div>
             <div class="project">
@@ -443,6 +454,7 @@
                         that generates the image itself and therefore returning in the end the urls of all images
                         generated for the story.
                     </small>
+                    <small class="tech-label">Technologies: Go, OpenAI API</small> <!-- Added class for styling -->
                 </div>
             </div>
             <div class="project">
@@ -459,6 +471,7 @@
                         <br> Hosted with Supabase, this projects uses its buckets for the file storage as well as for
                         the filetransfer and autosign URLs.
                     </small>
+                    <small class="tech-label">Technologies: React, Supabase</small> <!-- Added class for styling -->
                 </div>
             </div>
             <div class="project">
@@ -472,6 +485,7 @@
                     <small>
                         Chrome extension with pomodoro timer and task list.
                     </small>
+                    <small class="tech-label">Technologies: JavaScript, Chrome Extensions</small> <!-- Added class for styling -->
                 </div>
             </div>
             <div class="project">
@@ -487,6 +501,7 @@
                         This service scans a website for links, and downloads excel file that then parses some of that
                         files' data onto a csv file with different table formats.
                     </small>
+                    <small class="tech-label">Technologies: C#, .NET</small> <!-- Added class for styling -->
                 </div>
             </div>
             <div class="project">
@@ -496,7 +511,7 @@
                     </a>
                 </div>
                 <div class="experience-details">
-                    <strong>Ecommerce Frontend</strong><br>
+                    <strong>Ecommerce Backend</strong><br>
                     <small>
                         .NET backend service for an ecommerce application.
                         elow you can find a detail list of the methods used in the application, but in sum the
@@ -505,6 +520,7 @@
                         just for the simplefication purpose of the application, and it introduzes the identity for
                         loging and registration.
                     </small>
+                    <small class="tech-label">Technologies: .NET, SQLite</small> <!-- Added class for styling -->
                 </div>
             </div>
             <div class="project">
@@ -520,6 +536,7 @@
                         Simple frontend using Angular that has a middle service making the http requests to the backend
                         getting the data to display to the user.
                     </small>
+                    <small class="tech-label">Technologies: Angular, Typescript</small> <!-- Added class for styling -->
                 </div>
             </div>
             <div class="project">
@@ -534,6 +551,7 @@
                         Very simple .NET/React chat application.
                         .NET project using SignalR to perform Websocket connection web chat application.
                     </small>
+                    <small class="tech-label">Technologies: .NET, React, SignalR</small> <!-- Added class for styling -->
                 </div>
             </div>
         </div>
