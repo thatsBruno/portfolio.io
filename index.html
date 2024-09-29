@@ -1,362 +1,586 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Bruno Ribeiro</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link href="src/style.css" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5NRBCT4R');</script>
-    <!-- End Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZY8TQ11XD"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-NZY8TQ11XD');
-    </script>
-    <!-- End Google tag (gtag.js) -->
-  </head>
-  <!-- Navbar -->
-  <div class="div" id="top">
-    <ul class="nav justify-content-center">
-      <img
-        class="photo"
-        src="https://avatars.githubusercontent.com/u/28793603?v=4"
-        alt="profile img"
-      />
-      <li class="nav-item">
-        <a class="nav-link active" href="#experience">// experience</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#projects">// projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#links">// links</a>
-      </li>
-    </ul>
-  </div>
-  <!-- Body -->
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NRBCT4R"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-  <!-- stars -->
-  <section class="wrapper">
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
-  </section>
-  <button click="topFunction()" id="topButton" title="Go to top"></button>
-    <!-- title -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2E3440;
+            /* Nord background */
+            color: #D8DEE9;
+            /* Nord text color */
+            line-height: 1.6;
+            margin: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        .navbar {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+        }
+
+        .navbar a {
+            color: #88C0D0;
+            /* Link color */
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            /* Increased max-width for better centering */
+            margin: auto;
+            /* Center the container */
+            padding: 20px;
+        }
+
+        .header {
+            padding: 430px 0;
+            /* Adjusted padding */
+            text-align: center;
+            border-bottom: 2px solid #88C0D0;
+            /* Added bottom border */
+        }
+
+        .header h1 {
+            font-size: 4em;
+            /* Increased font size */
+            color: #D8DEE9;
+            /* Changed text color */
+        }
+
+        .header h2 {
+            font-size: 2em;
+            /* Increased font size */
+            color: #88C0D0;
+            /* Changed subtitle color */
+        }
+
+        .header p {
+            font-size: 1.2em;
+            /* Added paragraph styling */
+            color: #D8DEE9;
+            /* Changed text color */
+            margin-top: 10px;
+            /* Added margin */
+        }
+
+        .bio,
+        .projects,
+        .tech-stack,
+        .resume {
+            margin: 10px auto 50px;
+            /* Center sections */
+            padding: 15px;
+            background-color: rgba(31, 35, 43, .4);
+            /* Added opacity */
+            border-radius: 8px;
+            width: 90%;
+            /* Adjusted width for better centering */
+        }
+
+        .experience {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px auto;
+            /* Center experience */
+            padding: 10px;
+            border-bottom: 1px solid #4C566A;
+            /* Divider */
+            width: 90%;
+            /* Adjusted width for better centering */
+        }
+
+        .experience:last-child {
+            border-bottom: none;
+            /* Remove last border */
+        }
+
+        .experience-time {
+            flex: 0 0 30%;
+            /* Fixed width for time */
+            text-align: left;
+            color: #88C0D0;
+            /* Time color */
+        }
+
+        .experience-details {
+            flex: 1;
+            /* Take remaining space */
+            text-align: left;
+        }
+
+        .project {
+            display: flex;
+            /* Use flexbox for layout */
+            justify-content: space-between;
+            /* Space between image and details */
+            margin: 10px auto;
+            /* Center project */
+            padding: 10px;
+            border-bottom: 1px solid #4C566A;
+            /* Divider */
+            width: 90%;
+            /* Adjusted width for better centering */
+        }
+
+        .project:last-child {
+            border-bottom: none;
+            /* Remove last border */
+        }
+
+        .project img {
+            flex: 0 0 30%;
+            /* Fixed width for image */
+            border-radius: 5px;
+        }
+
+        .project-details {
+            flex: 1;
+            /* Take remaining space */
+            text-align: left;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background-color: #4C566A;
+            /* Skill background */
+            padding: 10px;
+            border-radius: 5px;
+            color: #D8DEE9;
+            /* Skill text color */
+            font-weight: bold;
+        }
+
+        .skill:hover {
+            box-shadow: 0 0 10px #88C0D0;
+            /* Glow effect */
+        }
+
+        .title {
+            margin-top: 2rem;
+            margin-bottom: 0rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h1 {
+                font-family: 'Space Mono', monospace;
+                font-weight: 900;
+                background-image: linear-gradient(135deg,
+                        rgb(102, 126, 234) 0%,
+                        rgb(118, 75, 162) 100%);
+                background-repeat: no-repeat;
+                background-size: 100% 0.2em;
+                background-position: 0 88%;
+            }
+
+            h3 {
+                color: #7f5af0;
+                font-style: italic;
+            }
+        }
+
+        .engineer {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            height: 20rem;
+            margin-top: 8rem;
+
+            img {
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+
+        p {
+            margin-top: 10rem;
+            font-style: italic;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .colaborations {
+            background-image: linear-gradient(135deg,
+                    rgb(102, 126, 234) 0%,
+                    rgb(118, 75, 162) 100%);
+            height: 3.5rem;
+            position: relative;
+            width: 100%;
+            margin: 0rem 0 5rem 0;
+            padding-left: 0 !important;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: auto;
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        .contacts {
+            background-image: linear-gradient(135deg,
+                    rgb(102, 126, 234) 0%,
+                    rgb(118, 75, 162) 100%);
+            height: 26rem;
+            margin-top: 10rem;
+            position: relative;
+            width: 100%;
+            padding-left: 0 !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .contacts-links {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 0 1rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            a {
+                font-family: 'Roboto', sans-serif;
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+
+        .contacts-text {
+            text-align: center;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        /* Add styles for the project images */
+        .project-img {
+            min-width: 70px;
+            /* Set a fixed width */
+            width: 70%;
+            height: auto;
+            /* Maintain aspect ratio */
+            border-radius: 5px;
+            /* Optional: add rounded corners */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <span style="color: #D8DEE9; margin-right: auto;"><i>thatsBruno </i>👨🏼‍💻</span> <!-- Added name to the navbar -->
+        <a href="#bio">About</a>
+        <a href="#resume">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#tech-stack">Tech Stack</a>
+    </div>
     <div class="title">
-      <h1>BRUNO RIBEIRO</h1>
-      <h3>Software Engineer</h3>
-      <div class="engineer">
-        <img src="/engineer-img.png" alt="engineer" />
-      </div>
-      <p id="experience">
-        Hi, I'm Bruno, a software engineer working on physical and virtual devices with ARM/Intel architecture, developing microservices and plugins with Go.
-      </p>
+        <h1>BRUNO RIBEIRO</h1>
+        <h3>Software Engineer</h3>
+        <div class="engineer">
+            <img src="images/engineer-img.png" alt="engineer" />
+        </div>
+        <p id="experience">
+            Hi, I'm Bruno, a software engineer working on physical and virtual devices with ARM/Intel architecture,
+            developing
+            microservices and plugins with Go.
+        </p>
     </div>
     <!-- colaborations -->
     <div class="colaborations">
-      <img src="/Siemens-Logo.png" class="logo" alt="siemens" />
-      <img src="/nokia.png" class="logo" alt="nokia" />
+        <img src="images/Siemens-Logo.png" class="logo" alt="siemens" />
+        <img src="images/nokia.png" class="logo" alt="nokia" />
     </div>
-    <!-- Experience -->
-    <div class="experience" >
-      <h3><span class="experience-title">Experience</span></h3>
-      <div
-        class="progress"
-        role="progressbar"
-        aria-label="Basic example"
-        aria-valuenow="50"
-        aria-valuemin="0"
-        aria-valuemax="100"
-      >
-        <div class="progress-bar" style="width: 60%">Software arquitecture</div>
-      </div>
-      <div
-        class="progress"
-        role="progressbar"
-        aria-label="Basic example"
-        aria-valuenow="75"
-        aria-valuemin="0"
-        aria-valuemax="100"
-      >
-        <div class="progress-bar" style="width: 70%">Software development</div>
-      </div>
-      <div
-        class="progress"
-        role="progressbar"
-        aria-label="Basic example"
-        aria-valuenow="100"
-        aria-valuemin="0"
-        aria-valuemax="100"
-      >
-        <div class="progress-bar" style="width: 66%">CI/CD</div>
-      </div>
-      <div
-        class="progress"
-        role="progressbar"
-        aria-label="Basic example"
-        aria-valuenow="100"
-        aria-valuemin="0"
-        aria-valuemax="100"
-      >
-        <div class="progress-bar" style="width: 63%">Unit testing</div>
-      </div>
-      <div
-        class="progress"
-        role="progressbar"
-        aria-label="Basic example"
-        aria-valuenow="100"
-        aria-valuemin="0"
-        aria-valuemax="100"
-      >
-        <div class="progress-bar" style="width: 69%">Problem solving</div>
-      </div>
+
+    <div class="container">
+
+        <div class="bio" id="bio">
+            <h2>About Me</h2>
+            Hi, I'm Bruno a Software Engineer that's open minded, inquisitive, and life-long learner, with mentorship
+            mentality and helping other developers grow professionally.<br>
+            A little about my background, I've graduate from DeMontfort University, UK, and currently I'm working at
+            Siemens in Industrial Edge where I have the opportunity to contribute to architectural decisions and thrive
+            in a dynamic and enterprise project.
+            <br>
+            <br>
+            Besides work, youl'll catch me either tinkering with some new framework or my vscode config with Vim
+            keybinds.
+            <br>
+            <br>
+            Outside of work, I enjoy doing crossfit and reading books on those 15min books apps, either about technology
+            or a future time with technology that is yet to come.
+        </div>
+
+        <div class="resume" id="resume">
+            <h2>Work Experience</h2>
+            <div class="experience">
+                <div class="experience-time">2024 <small>May</small> - <i><small>Present</small></i></div>
+                <div class="experience-details">
+                    <strong>Software Engineer</strong> - <i>Siemens</i><br>
+                    <small>
+                        • Testing and developing microservices, features for virtual and physical devices with ARM/Intel
+                        architecture with Go.<br>
+                        • Built the CICD for our project, where we need to deploy virtual devices and device managers,
+                        connecting them together and run tests.<br>
+                        • Helping and leading the team as a second in line after our project Architect.
+                    </small>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="experience-time">2023 <small>Nov</small> - 2024 <small>May</small></div>
+                <div class="experience-details">
+                    <strong>Software Engineer</strong> - <i>JobDeploy @ Siemens</i><br>
+                    <small>
+                        • Developing .NET/Angular microservices and features to integrate with existent applications and
+                        services, integration with services like AWS Cloudwatch and signalR.
+                    </small>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="experience-time">2023 <small>Feb</small> - 2023 <small>Nov</small></div>
+                <div class="experience-details">
+                    <strong>Full Stack Engineer</strong> - <i>Siemens</i><br>
+                    <small>
+                        • International enterprise project with DDD and Clean code, written in .NET and using Redis,
+                        REST, SOAP, EF Core, Linq.
+                        <br>• Winner of the Hackath0n Siemens DI IT 2023.
+                    </small>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="experience-time">2022 <small>May</small> - 2023 <small>Feb</small></div>
+                <div class="experience-details">
+                    <strong>Software Engineer</strong> - <i>Nokia</i><br>
+                    <small>
+                        • Network and cloud integration with python and bash.
+                    </small>
+                </div>
+            </div>
+            <!-- Add more experiences as needed -->
+        </div>
+
+        <div class="projects" id="projects">
+            <h2>Side Projects</h2>
+            <div class="project">
+                <div class="experience-time">
+
+                    <a href="https://github.com/thatsBruno/p2p-golang" target="_blank">
+                        <img src="images/p2p.jpeg" alt="p2p" class="project-img">
+                    </a>
+                </div>
+                <div class="experience-details">
+                    <strong>Peer 2 peer</strong><br>
+                    <small>
+                        Peer to peer microservice written in Go, utilizing TCP transport methods for files.
+                        <br> Currently work in progress...
+                    </small>
+                </div>
+            </div>
+            <div class="project">
+                <div class="experience-time">
+                    <a href="https://github.com/thatsBruno/learningplatform " target="_blank">
+                        <img src="images/learning-platform.jpeg" alt="learningplat" class="project-img">
+                    </a>
+                </div>
+                <div class="experience-details">
+                    <strong>Learning Platform</strong><br>
+                    <small>
+                        Backend service built with Java and Spring Boot of a online learning platform that has Courses,
+                        Lessons, Users, and Enrollment models. <br>
+                        REST API as connection point.
+                    </small>
+                </div>
+            </div>
+            <div class="project">
+                <div class="experience-time">
+
+                    <a href="https://github.com/thatsBruno/PortugueseApartmentPrice-ML " target="_blank">
+                        <img src="images/ML.jpeg" alt="ml" class="project-img">
+                    </a>
+                </div>
+                <div class="experience-details">
+                    <strong>Housing prediction ML</strong><br>
+                    <small>
+                        Machine learning model using ML.NET.<br>
+                        This ML model was trained on apartments all over Portugal area, with a dataset from 2024 an
+                        about 13k rows, however this model only reached 59.81 RSquared with FastForestRegression since
+                        the dataset I had was small.
+                    </small>
+                </div>
+            </div>
+            <div class="project">
+                <div class="experience-time">
+
+                    <a href="https://github.com/thatsBruno/storyGen" target="_blank">
+                        <img src="images/storyGen.jpeg" alt="storygen" class="project-img">
+                    </a>
+                </div>
+                <div class="experience-details">
+                    <strong>Story Generator</strong><br>
+                    <small>
+                        Comic generator microservice written in Go, using OpenAI API to generate images.
+                        <br>This project is a test on how the OpenAIs API works, essentially this backend service has
+                        one single endpoint that receives a story, and return images based on that story.
+                        In detail it makes two requests, one for splitting the story into 'frames' or parts, and another
+                        that generates the image itself and therefore returning in the end the urls of all images
+                        generated for the story.
+                    </small>
+                </div>
+            </div>
+            <div class="project">
+                <div class="experience-time">
+                    <a href="https://github.com/thatsBruno/filebridge" target="_blank">
+                        <img src="images/filebridge.jpeg" alt="filebridge" class="project-img">
+                    </a>
+                </div>
+                <div class="experience-details">
+                    <strong>Filebridge</strong><br>
+                    <small>
+                        Microservice with React using Supabase as DB allowing for host or deploy a file sharer with
+                        friends.
+                        <br> Hosted with Supabase, this projects uses its buckets for the file storage as well as for
+                        the filetransfer and autosign URLs.
+                    </small>
+                </div>
+            </div>
+            <div class="project">
+                <div class="experience-time">
+                    <a href="https://github.com/thatsBruno/pommy" target="_blank">
+                        <img src="images/pommy.jpeg" alt="pommy" class="project-img">
+                    </a>
+                </div>
+                <div class="experience-details">
+                    <strong>Pommy</strong><br>
+                    <small>
+                        Chrome extension with pomodoro timer and task list.
+                    </small>
+                </div>
+            </div>
+            <div class="project">
+                <div class="experience-time">
+                    <a href="https://github.com/thatsBruno/webscrapper" target="_blank">
+                        <img src="images/webscrapper.jpeg" alt="pommy" class="project-img">
+                    </a>
+                </div>
+                <div class="experience-details">
+                    <strong>Webscrapper</strong><br>
+                    <small>
+                        Webscrapper C# service.
+                        This service scans a website for links, and downloads excel file that then parses some of that
+                        files' data onto a csv file with different table formats.
+                    </small>
+                </div>
+            </div>
+            <div class="project">
+                <div class="experience-time">
+                    <a href="https://github.com/thatsBruno/ProductStore-FE" target="_blank">
+                    <img src="images/products-app2.jpeg" alt="ecommerceBE" class="project-img">
+                    </a>
+                </div>
+                <div class="experience-details">
+                    <strong>Ecommerce Frontend</strong><br>
+                    <small>
+                        .NET backend service for an ecommerce application.
+                        elow you can find a detail list of the methods used in the application, but in sum the
+                        application is developed based on the repository pattern and the specification pattern together
+                        with type generics, providing the data in DTOs using AutoMapper. Locally the project uses SQLite
+                        just for the simplefication purpose of the application, and it introduzes the identity for
+                        loging and registration.
+                    </small>
+                </div>
+            </div>
+            <div class="project">
+                <div class="experience-time">
+                    <a href="https://github.com/thatsBruno/store-api" target="_blank">
+                        <img src="images/products-app.jpeg" alt="ecommerceFE" class="project-img">
+                    </a>
+                </div>
+                <div class="experience-details">
+                    <strong>Ecommerce Frontend</strong><br>
+                    <small>
+                        Angular Frontend for an ecommerce application.
+                        Simple frontend using Angular that has a middle service making the http requests to the backend
+                        getting the data to display to the user.
+                    </small>
+                </div>
+            </div>
+            <div class="project">
+                <div class="experience-time">
+                    <a href="https://github.com/thatsBruno/chat-app" target="_blank">
+                        <img src="images/chatapp.jpeg" alt="chatapp" class="project-img">
+                    </a>
+                </div>
+                <div class="experience-details">
+                    <strong>Chat app</strong><br>
+                    <small>
+                        Very simple .NET/React chat application.
+                        .NET project using SignalR to perform Websocket connection web chat application.
+                    </small>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-stack" id="tech-stack">
+            <h2>Tech Stack</h2>
+            <h3>Backend</h3>
+            <div class="skills">
+                <div class="skill">.NET</div>
+                <div class="skill">C#</div>
+                <div class="skill">Go</div>
+                <div class="skill">PostgreSQL</div>
+            </div>
+            <h3>Frontend</h3>
+            <div class="skills">
+                <div class="skill">Angular</div>
+                <div class="skill">Typescript</div>
+                <div class="skill">NodeJS</div>
+            </div>
+            <h3>Other</h3>
+            <div class="skills">
+                <div class="skill">Git</div>
+                <div class="skill">CICD</div>
+                <div class="skill">Gitlab</div>
+                <div class="skill">Docker</div>
+                <div class="skill">AWS</div>
+                <div class="skill">WSL</div>
+            </div>
+        </div>
     </div>
-    <!-- Teck stack -->
-    <div class="tech-stack">
-      <img src="icons/icons8-python-48.png" class="logo" alt="python" />
-      <img src="icons/icons8-kubernetes-48.png" class="logo" alt="kubernetes" />
-      <img src="icons/docker.png" class="logo" alt="docker" />
-      <img src="icons/icons8-amazon-web-services-480.png" class="logo" alt="aws" />
-      <img src="icons/icons8-golang-48.png" class="logo" alt="go" />
-      <img src="icons/icons8-git-480.png" class="logo" alt="git" />
-      <img src="icons/icons8-gitlab-480.png" class="logo" alt="gitlab" />
-      <img src="icons/icons8-postgresql-480.png" class="logo" alt="postgresql" />
-      <img src="icons/icons8-angular-512.png" class="logo" alt="angular" />
-      <img src="icons/js.png" class="logo" alt="js" />
-      <img src="icons/icons8-nodejs-48.png" class="logo" alt="nodejs" />
-      <img src="icons/typescript.png" class="logo" alt="ts" />
-      <img src="icons/c-sharp.png" class="logo" alt="c-sharp" />
-      <img src="icons/icons8-.net-framework-480.png" class="logo" alt=".net" />
-    </div>
-    <!-- Projects -->
-    <h3 class="text-center mb-4"><span class="experience-title">Projects</span></h3>
-    <div class="row row-cols-1 row-cols-md-5 g-4 m-4" id="projects">
-    <!--learning platform-->
-      <div class="col">
-        <div class="card">
-          <a
-            href="https://github.com/thatsBruno/LearningPlatform"
-            target="_blank">
-            <img
-              src="learning-platform.jpeg"
-              class="card-img-top"
-              alt="storyGen"
-            />
-          </a>
-          <div class="card-body h-100">
-            <h5 class="card-title">Learning Platform</h5>
-            <span class="card-text">
-              (Spring Boot)
-            </span>
-          </div>
-        </div>
-      </div>
-      <!-- p2p server-->
-      <div class="col">
-        <div class="card">
-          <a
-            href="https://github.com/thatsBruno/p2p-golang"
-            target="_blank">
-            <img
-              src="p2p.jpeg"
-              class="card-img-top"
-              alt="storyGen"
-            />
-          </a>
-          <div class="card-body h-100">
-            <h5 class="card-title">p2p service</h5>
-            <span class="card-text">
-              (Go) currently in progress...
-            </span>
-          </div>
-        </div>
-      </div>
-    <!--ML-->
-      <div class="col">
-        <div class="card">
-          <a
-            href="https://github.com/thatsBruno/PortugueseApartmentPrice-ML"
-            target="_blank">
-            <img
-              src="ML.jpeg"
-              class="card-img-top"
-              alt="storyGen"
-            />
-          </a>
-          <div class="card-body h-100">
-            <h5 class="card-title">Apartment Prediction</h5>
-            <span class="card-text">
-              (ML.NET)
-            </span>
-          </div>
-        </div>
-      </div>
-      <!-- storyGen-->
-      <div class="col">
-        <div class="card">
-          <a
-          href="https://github.com/thatsBruno/storyGen"
-          target="_blank">
-          <img
-          src="storyGen.jpeg"
-          class="card-img-top"
-          alt="storyGen"
-          />
-        </a>
-        <div class="card-body h-100">
-          <h5 class="card-title">storyGen</h5>
-          <span class="card-text">
-            (Go/OpenAI)
-          </span>
-        </div>
-      </div>
-    </div>
-      <!-- Filebridge-->
-      <div class="col">
-        <div class="card">
-          <a
-          href="https://github.com/thatsBruno/filebridge"
-          target="_blank">
-          <img
-          src="filebridge.jpeg"
-          class="card-img-top"
-          alt="filebridge"
-          />
-        </a>
-        <div class="card-body h-100">
-          <h5 class="card-title">Filebridge</h5>
-          <span class="card-text">
-            (React/Supabase)
-          </span>
-        </div>
-      </div>
-    </div>
-  <!-- Pommy -->
-  <div class="col">
-    <div class="card">
-      <a href="https://github.com/thatsBruno/pommy" target="_blank"
-        ><img src="pommy.jpeg" class="card-img-top" alt="pommy"
-      /></a>
-      <div class="card-body h-100">
-        <h5 class="card-title">Pommy</h5>
-        <span class="card-text">
-          (Chrome extension/JS)
-        </span>
-      </div>
-    </div>
-  </div>
-  <!-- E-commerce app backend -->
-      <div class="col">
-        <div class="card">
-          <a
-            href="https://github.com/thatsBruno/store-api"
-            target="_blank"
-          >
-            <img
-              src="products-app2.jpeg"
-              class="card-img-top"
-              alt="products app"
-            />
-          </a>
-          <div class="card-body h-100">
-            <h5 class="card-title">E-commerce app</h5>
-            <span class="card-text">
-              (.Net)
-            </span>
-          </div>
-        </div>
-      </div>
-      <!-- E-commerce app frontend -->
-      <div class="col">
-        <div class="card">
-          <a
-            href="https://github.com/thatsBruno/ProductStore-FE"
-            target="_blank"
-          >
-            <img
-              src="products-app.jpeg"
-              class="card-img-top"
-              alt="products app"
-            />
-          </a>
-          <div class="card-body h-100">
-            <h5 class="card-title">E-commerce app</h5>
-            <span class="card-text">
-              (Angular)
-            </span>
-          </div>
-        </div>
-      </div>
-      <!-- Web Scrapper -->
-      <div class="col">
-        <div class="card">
-          <a
-            href="https://github.com/thatsBruno/WebScrapper"
-            target="_blank">
-            <img
-              src="webscrapper.jpeg"
-              class="card-img-top"
-              alt="web scrapper"
-            />
-          </a>
-          <div class="card-body h-100">
-            <h5 class="card-title">Web Scrapper</h5>
-            <span class="card-text">
-              (.Net)
-            </span>
-          </div>
-        </div>
-      </div>
-      <!-- Chat app -->
-      <div class="col">
-        <div class="card">
-          <a
-            href="https://github.com/thatsBruno/chat-app"
-            target="_blank">
-            <img
-              src="chatapp.jpeg"
-              class="card-img-top"
-              alt="chat app"
-            />
-          </a>
-          <div class="card-body h-100">
-            <h5 class="card-title">Chat app</h5>
-            <span class="card-text">
-              (.Net/React)
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-      <!-- script -->
-    <script src="src/index.js"></script>
-  </body>
-  <!-- Footer -->
-  <footer>
+</body>
+<footer>
     <div class="contacts" id="links">
-      <div class="contacts-links">
-        <a href="https://github.com/thatsBruno" target="_blank">
-          <img src="icons/icons8-github-100.png" alt="Github" class="social-icon" />
-        </a>
-        <a href="https://www.linkedin.com/in/brunodasilvaribeiro" target="_blank">
-          <img src="icons/icons8-linkedin-100.png" alt="LinkedIn" class="social-icon" />
-        </a>
-      </div>
+        <div class="contacts-links" "> <!-- Added flexbox for alignment -->
+            <a href=" https://github.com/thatsBruno" target="_blank">
+            <img src="images/icons8-github-100.png" alt="Github" class="social-icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/brunodasilvaribeiro" target="_blank">
+                <img src="images/icons8-linkedin-100.png" alt="LinkedIn" class="social-icon" />
+            </a>
+            <a href="https://leetcode.com/u/thatsBruno/" target="_blank">
+                <img src="images/icons8-level-up-your-coding-skills-and-quickly-land-a-job-72.png" alt="leetcode"
+                    class="social-icon" />
+            </a>
+        </div>
+        <i>© 2024 Bruno Ribeiro. All rights reserved.</i>
     </div>
-  </footer>
+</footer>
+
 </html>
