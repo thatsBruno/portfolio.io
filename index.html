@@ -23,6 +23,7 @@
             justify-content: space-between;
             align-items: center;
             margin: 0;
+            position: relative; /* Added for positioning */
         }
 
         .navbar a {
@@ -247,6 +248,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            z-index: -1;
         }
 
         .contacts-links {
@@ -292,17 +294,67 @@
             color: #88C0D0;
             /* Match the color with the theme */
         }
+
+        .navbar-menu {
+            display: flex; /* Show menu items in a row */
+            gap: 15px; /* Space between links */
+        }
+
+        .navbar-toggle {
+            display: none; /* Hide toggle by default */
+            cursor: pointer; /* Pointer cursor for toggle */
+        }
+
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none; /* Hide menu items on small screens */
+                flex-direction: column; /* Stack items vertically */
+                position: absolute; /* Positioning for dropdown */
+                top: 50px; /* Position below navbar */
+                right: 0; /* Align to the right */
+                background-color: #2E3440; /* Match background */
+                width: 100%; /* Full width */
+                z-index: 1; /* Ensure it appears above other content */
+            }
+
+            .navbar-menu.active {
+                display: flex; /* Show menu when active */
+            }
+
+            .navbar-toggle {
+                display: block; /* Show toggle on small screens */
+            }
+        }
+
+        .scroll-to-top {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Distance from bottom */
+            right: 20px; /* Distance from right */
+            background-color: #2E3440; /* Background color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            border-radius: 50%; /* Circular button */
+            width: 50px; /* Width */
+            height: 50px; /* Height */
+            cursor: pointer; /* Pointer cursor */
+            align-items: center; /* Center content */
+            justify-content: center; /* Center content */
+            display: flex; /* Flexbox for centering */
+        }
     </style>
 </head>
 
 <body>
     <div class="navbar">
         <span style="color: #D8DEE9; margin-right: auto;"><i>thatsBruno </i>👨🏼‍💻</span>
-        <!-- Added name to the navbar -->
-        <a href="#bio">About</a>
-        <a href="#resume">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#tech-stack">Tech Stack</a>
+        <div class="navbar-toggle" onclick="toggleMenu()">☰</div> <!-- Added toggle button -->
+        <div class="navbar-menu" id="navbarMenu"> <!-- Added menu container -->
+            <a href="#bio">About</a>
+            <a href="#resume">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#tech-stack">Tech Stack</a>
+        </div>
     </div>
     <div class="title">
         <h1>BRUNO RIBEIRO</h1>
@@ -316,9 +368,9 @@
             microservices and plugins with Go.
         </p>
     </div>
-    <!-- colaborations -->
-    <div class="colaborations">
+    <div class="colaborations" id="colaborations">
         <img src="images/Siemens-Logo.png" class="logo" alt="siemens" />
+    <!-- colaborations -->
         <img src="images/nokia.png" class="logo" alt="nokia" />
     </div>
 
@@ -609,6 +661,32 @@
             </div>
         </div>
     </div>
+
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">↑</button> <!-- Added button -->
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navbarMenu');
+            menu.classList.toggle('active'); // Toggle active class for menu
+        }
+
+        // Show button when scrolling past the bio section
+        window.onscroll = function() {
+            const colabSection = document.getElementById('colaborations'); // Assuming bio section has this ID
+            const scrollToTopButton = document.getElementById('scrollToTop');
+            const colabOffset = colabSection.offsetTop + colabSection.offsetHeight; // Bottom of bio section
+
+            if (document.body.scrollTop > colabOffset || document.documentElement.scrollTop > colabOffset) {
+                scrollToTopButton.style.display = "flex"; // Show button
+            } else {
+                scrollToTopButton.style.display = "none"; // Hide button
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
+        }
+    </script>
 </body>
 <footer>
     <div class="contacts" id="links">
