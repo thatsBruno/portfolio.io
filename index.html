@@ -372,6 +372,19 @@
             /* Flexbox for centering */
             z-index: 1;
         }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); /* Responsive grid */
+            gap: 10px; /* Space between items */
+            justify-items: center; /* Center items in their grid cells */
+            margin-top: 20px; /* Space above the grid */
+        }
+
+        .tech-icon {
+            width: 50px; 
+            height: auto; 
+        }
     </style>
 </head>
 
@@ -427,6 +440,42 @@
             <br>
             Outside of tech, I enjoy doing CrossFit and reading bite-sized books on apps, mostly about technology or
             futuristic concepts involving tech.
+        </div>
+
+        <div class="tech-stack" id="tech-stack">
+            <h2>Tech Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="images/golang.png" alt="Go" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/net.png" alt=".NET" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/nodejs.png" alt="NodeJS" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/angular.png" alt="Angular" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/react.png" alt="React" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/gitlab.png" alt="Gitlab" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/docker.png" alt="Docker" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/aws.png" alt="AWS" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/postgres.png" alt="PostgreSQL" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/linux.png" alt="WSL" class="tech-icon" />
+                </div>
+            </div>
         </div>
 
         <div class="resume" id="resume">
@@ -676,31 +725,6 @@
                     <small class="tech-label">Technologies: .NET, React, SignalR</small>
                     <!-- Added class for styling -->
                 </div>
-            </div>
-        </div>
-
-        <div class="tech-stack" id="tech-stack">
-            <h2>Tech Stack</h2>
-            <h3>Backend</h3>
-            <div class="skills">
-                <div class="skill">Go</div>
-                <div class="skill">.NET</div>
-                <div class="skill">NodeJS</div>
-            </div>
-            <h3>Frontend</h3>
-            <div class="skills">
-                <div class="skill">Angular</div>
-                <div class="skill">React</div>
-                <div class="skill">Typescript</div>
-            </div>
-            <h3>Other</h3>
-            <div class="skills">
-                <div class="skill">CICD</div>
-                <div class="skill">Gitlab</div>
-                <div class="skill">Docker</div>
-                <div class="skill">AWS</div>
-                <div class="skill">PostgreSQL</div>
-                <div class="skill">WSL</div>
             </div>
         </div>
     </div>
