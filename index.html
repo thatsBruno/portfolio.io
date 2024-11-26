@@ -156,7 +156,7 @@
         }
 
         .skill {
-            background-color: #4C566A;
+            background-color: #4c566a3d;
             /* Skill background */
             padding: 10px;
             border-radius: 5px;
@@ -166,7 +166,8 @@
         }
 
         .skill:hover {
-            box-shadow: 0 0 10px #88C0D0;
+            box-shadow: 0 0 10px #03cdff;
+            border-color: 0 0 10px #03cdff;
             /* Glow effect */
         }
 
@@ -371,6 +372,19 @@
             /* Flexbox for centering */
             z-index: 1;
         }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); /* Responsive grid */
+            gap: 10px; /* Space between items */
+            justify-items: center; /* Center items in their grid cells */
+            margin-top: 20px; /* Space above the grid */
+        }
+
+        .tech-icon {
+            width: 50px; 
+            height: auto; 
+        }
     </style>
 </head>
 
@@ -380,9 +394,9 @@
         <div class="navbar-toggle" onclick="toggleMenu()">☰</div> <!-- Added toggle button -->
         <div class="navbar-menu" id="navbarMenu"> <!-- Added menu container -->
             <a href="#bio">About</a>
+            <a href="#tech-stack">Tech Stack</a>
             <a href="#resume">Experience</a>
             <a href="#projects">Projects</a>
-            <a href="#tech-stack">Tech Stack</a>
         </div>
     </div>
     <div class="title">
@@ -392,9 +406,7 @@
             <img src="images/engineer-img.png" alt="engineer" />
         </div>
         <p id="experience">
-            Hi, I'm Bruno, a software engineer working on physical and virtual devices with ARM/Intel architecture,
-            developing
-            microservices and plugins with Go.
+            Learn about my path in the software engineering world, while I continuously grow to become a Tech Lead.
         </p>
     </div>
     <div class="colaborations" id="colaborations">
@@ -407,54 +419,99 @@
 
         <div class="bio" id="bio">
             <h2>About Me</h2>
-            Hi, I'm Bruno a Software Engineer that's open minded, inquisitive, and life-long learner, with mentorship
-            mentality and helping other developers grow professionally.<br>
-            A little about my background, I've graduate from DeMontfort University, UK, and currently I'm working at
-            Siemens in Industrial Edge where I have the opportunity to contribute to architectural decisions and thrive
-            in a dynamic and enterprise project.
+            Hi, I'm Bruno, a Software Engineer who is open-minded, inquisitive, and a life-long learner, with a
+            mentorship mentality and a passion for helping other developers grow professionally.
             <br>
             <br>
-            Besides work, youl'll catch me either tinkering with some new framework or my vscode config with Vim
+            A bit about my background: I graduated from DeMontfort University, UK, and after returning home, I started
+            working at Nokia, where I gained experience in network integration. A few months later, I joined Siemens,
+            where I worked on a mature project and had the opportunity to learn extensively about microservices, CI/CD,
+            the .NET ecosystem, Angular, and the full flow of web apps from backend to frontend, up to the deployment of databases and services on AWS.
+            <br>
+            <br>
+            Currently, I'm working on an Industrial Edge project at Siemens, where I contribute to code reviews, architectural decisions and
+            thrive in a dynamic enterprise environment, as well as developing features and plugins in Go for both virtual and
+            physical devices, and handle deployment and testing on GitLab’s pipeline.
+            <br>
+            <br>
+            When I'm not working, you'll find me tinkering with new frameworks or fine-tuning my VSCode config with Vim
             keybinds.
             <br>
             <br>
-            Outside of work, I enjoy doing crossfit and reading books on those 15min books apps, either about technology
-            or a future time with technology that is yet to come.
+            Outside of tech, I enjoy doing CrossFit and reading bite-sized books on apps, mostly about technology or
+            futuristic concepts involving tech.
+        </div>
+
+        <div class="tech-stack" id="tech-stack">
+            <h2>Tech Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="images/golang.png" alt="Go" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/net.png" alt=".NET" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/nodejs.png" alt="NodeJS" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/angular.png" alt="Angular" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/react.png" alt="React" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/gitlab.png" alt="Gitlab" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/docker.png" alt="Docker" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/aws.png" alt="AWS" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/postgres.png" alt="PostgreSQL" class="tech-icon" />
+                </div>
+                <div class="tech-item">
+                    <img src="images/linux.png" alt="WSL" class="tech-icon" />
+                </div>
+            </div>
         </div>
 
         <div class="resume" id="resume">
-            <h2>Work Experience</h2>
+            <h2>My Experience</h2>
             <div class="experience">
-                <div class="experience-time">2024 <small>May</small> - <i><small>Present</small></i></div>
+                <div class="experience-time">2023 <small>Feb</small> - <i><small>Present</small></i></div>
                 <div class="experience-details">
                     <strong>Software Engineer</strong> - <i>Siemens</i><br>
                     <small>
                         • Testing and developing microservices, features for virtual and physical devices with ARM/Intel
-                        architecture with Go.<br>
+                        architecture with Go and with AWS EC2 instances.
+                        <br>
                         • Built the CICD for our project, where we need to deploy virtual devices and device managers,
-                        connecting them together and run tests.<br>
+                        connecting them together and run tests.
+                        <br>
                         • Helping and leading the team as a second in line after our project Architect.
                     </small>
-                </div>
-            </div>
-            <div class="experience">
-                <div class="experience-time">2023 <small>Nov</small> - 2024 <small>May</small></div>
-                <div class="experience-details">
-                    <strong>Software Engineer</strong> - <i>JobDeploy @ Siemens</i><br>
+                    <br>
+                    <br>
+                    <strong>Full Stack Engineer</strong><br>
                     <small>
-                        • Developing .NET/Angular microservices and features to integrate with existent applications and
-                        services.<br>
-                        • Integration with services like AWS Cloudwatch and signalR.
+                        • Developing of fullstack backend for frontend microservices to integrate with existent applications and services.
+                        <br>
+                        • .NET/Angular, DDD structure and integration with services such as AWS and Gitlab.
                     </small>
-                </div>
-            </div>
-            <div class="experience">
-                <div class="experience-time">2023 <small>Feb</small> - 2023 <small>Nov</small></div>
-                <div class="experience-details">
-                    <strong>Full Stack Engineer</strong> - <i>Siemens</i><br>
+                    <br>
+                    <br>
+                    <strong>Full Stack Engineer</strong><br>
                     <small>
                         • International enterprise project with DDD and Clean code, written in .NET and using Redis,
                         REST, SOAP, EF Core, Linq.
+                        <br>
+                        • Developing .NET/Angular microservices and features to integrate with existent applications and
+                        services.
+                        <br>
+                        • Integration with services like AWS Cloudwatch and signalR.
                         <br>• Winner of the Hackath0n Siemens DI IT 2023.
                     </small>
                 </div>
@@ -476,23 +533,6 @@
             <div class="project">
                 <div class="experience-time">
 
-                    <a href="https://github.com/thatsBruno/cc" target="_blank">
-                        <img src="images/cc.jpeg" alt="cc" class="project-img">
-                    </a>
-                </div>
-                <div class="experience-details">
-                    <strong>Coding Challenges</strong><br>
-                    <small>
-                        Weekly coding challenges by John Crickett.
-                        <br> Currently work in progress...
-                    </small>
-                    <!-- Moved technologies to the bottom -->
-                    <small class="tech-label">Technologies: Go</small> <!-- Added class for styling -->
-                </div>
-            </div>
-            <div class="project">
-                <div class="experience-time">
-
                     <a href="https://github.com/thatsBruno/p2p-golang" target="_blank">
                         <img src="images/p2p.jpeg" alt="p2p" class="project-img">
                     </a>
@@ -505,6 +545,38 @@
                     </small>
                     <!-- Moved technologies to the bottom -->
                     <small class="tech-label">Technologies: Go, TCP</small> <!-- Added class for styling -->
+                </div>
+            </div>
+            <div class="project">
+                <div class="experience-time">
+
+                    <a href="https://github.com/thatsBruno/blogo" target="_blank">
+                        <img src="images/blogo.png" alt="blogo" class="project-img">
+                    </a>
+                </div>
+                <div class="experience-details">
+                    <strong>Blog Platform</strong><br>
+                    <small>
+                        Blog backend microservice developed with Go using goose for the schema scafolding, sqlc as a querying mediator, and postgresql within Docker.
+                        Users can have feeds, and follow feeds, more info in the readme.
+                    </small>
+                    <small class="tech-label">Technologies: Go, Docker</small> <!-- Added class for styling -->
+                </div>
+            </div>
+            <div class="project">
+                <div class="experience-time">
+
+                    <a href="https://github.com/thatsBruno/stocksGraph" target="_blank">
+                        <img src="images/stocksGraph.png" alt="stocksGraph" class="project-img">
+                    </a>
+                </div>
+                <div class="experience-details">
+                    <strong>Stocks Graph</strong><br>
+                    <small>
+                        In this project we receive stocks from a .json file and display in a table allowing the user to click individually on a stock and checking the graph of the Value upon time of the stock.
+                    </small>
+                    <!-- Moved technologies to the bottom -->
+                    <small class="tech-label">Technologies: NodeJS, React, Docker</small> <!-- Added class for styling -->
                 </div>
             </div>
             <div class="project">
@@ -661,32 +733,6 @@
                     <small class="tech-label">Technologies: .NET, React, SignalR</small>
                     <!-- Added class for styling -->
                 </div>
-            </div>
-        </div>
-
-        <div class="tech-stack" id="tech-stack">
-            <h2>Tech Stack</h2>
-            <h3>Backend</h3>
-            <div class="skills">
-                <div class="skill">.NET</div>
-                <div class="skill">C#</div>
-                <div class="skill">Go</div>
-                <div class="skill">PostgreSQL</div>
-            </div>
-            <h3>Frontend</h3>
-            <div class="skills">
-                <div class="skill">Angular</div>
-                <div class="skill">Typescript</div>
-                <div class="skill">NodeJS</div>
-            </div>
-            <h3>Other</h3>
-            <div class="skills">
-                <div class="skill">Git</div>
-                <div class="skill">CICD</div>
-                <div class="skill">Gitlab</div>
-                <div class="skill">Docker</div>
-                <div class="skill">AWS</div>
-                <div class="skill">WSL</div>
             </div>
         </div>
     </div>
