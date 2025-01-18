@@ -105,7 +105,7 @@
         }
 
         .experience-time {
-            flex: 0 0 30%;
+            flex: 0 0 10%;
             /* Fixed width for time */
             text-align: left;
             color: #88C0D0;
@@ -138,7 +138,7 @@
         }
 
         .project img {
-            flex: 0 0 30%;
+            flex: 0 0 5%;
             /* Fixed width for image */
             border-radius: 5px;
         }
@@ -523,7 +523,8 @@
                 </div>
             </div>
             <div class="experience">
-                <div class="experience-time">2022 <small>May</small> - 2023 <small>Feb</small></div>
+                <div class="experience-time">
+                    2022 <small>May</small> - 2023 <small>Feb</small></div>
                 <div class="experience-details">
                     <strong>Software Engineer</strong> - <i>Nokia</i><br>
                     <small>
@@ -531,28 +532,10 @@
                     </small>
                 </div>
             </div>
-            <!-- Add more experiences as needed -->
         </div>
 
         <div class="projects" id="projects">
             <h2>Side Projects</h2>
-            <div class="project">
-                <div class="experience-time">
-
-                    <a href="https://github.com/thatsBruno/p2p-golang" target="_blank">
-                        <img src="images/p2p.jpeg" alt="p2p" class="project-img">
-                    </a>
-                </div>
-                <div class="experience-details">
-                    <strong>Peer 2 peer</strong><br>
-                    <small>
-                        Peer to peer microservice written in Go, utilizing TCP transport methods for files.
-                        <br> Currently work in progress...
-                    </small>
-                    <!-- Moved technologies to the bottom -->
-                    <small class="tech-label">Technologies: Go, TCP</small> <!-- Added class for styling -->
-                </div>
-            </div>
             <div class="project">
                 <div class="experience-time">
 
@@ -590,61 +573,6 @@
             </div>
             <div class="project">
                 <div class="experience-time">
-                    <a href="https://github.com/thatsBruno/learningplatform " target="_blank">
-                        <img src="images/learning-platform.jpeg" alt="learningplat" class="project-img">
-                    </a>
-                </div>
-                <div class="experience-details">
-                    <strong>Learning Platform</strong><br>
-                    <small>
-                        Backend service built with Java and Spring Boot of a online learning platform that has Courses,
-                        Lessons, Users, and Enrollment models. <br>
-                        REST API as connection point.
-                    </small>
-                    <small class="tech-label">Technologies: Java, Spring Boot, REST</small>
-                    <!-- Added class for styling -->
-                </div>
-            </div>
-            <div class="project">
-                <div class="experience-time">
-
-                    <a href="https://github.com/thatsBruno/PortugueseApartmentPrice-ML " target="_blank">
-                        <img src="images/ML.jpeg" alt="ml" class="project-img">
-                    </a>
-                </div>
-                <div class="experience-details">
-                    <strong>Housing prediction ML</strong><br>
-                    <small>
-                        Machine learning model using ML.NET.<br>
-                        This ML model was trained on apartments all over Portugal area, with a dataset from 2024 an
-                        about 13k rows, however this model only reached 59.81 RSquared with FastForestRegression since
-                        the dataset I had was small.
-                    </small>
-                    <small class="tech-label">Technologies: ML.NET, C#</small> <!-- Added class for styling -->
-                </div>
-            </div>
-            <div class="project">
-                <div class="experience-time">
-
-                    <a href="https://github.com/thatsBruno/storyGen" target="_blank">
-                        <img src="images/storyGen.jpeg" alt="storygen" class="project-img">
-                    </a>
-                </div>
-                <div class="experience-details">
-                    <strong>Story Generator</strong><br>
-                    <small>
-                        Comic generator microservice written in Go, using OpenAI API to generate images.
-                        <br>This project is a test on how the OpenAIs API works, essentially this backend service has
-                        one single endpoint that receives a story, and return images based on that story.
-                        In detail it makes two requests, one for splitting the story into 'frames' or parts, and another
-                        that generates the image itself and therefore returning in the end the urls of all images
-                        generated for the story.
-                    </small>
-                    <small class="tech-label">Technologies: Go, OpenAI API</small> <!-- Added class for styling -->
-                </div>
-            </div>
-            <div class="project">
-                <div class="experience-time">
                     <a href="https://github.com/thatsBruno/filebridge" target="_blank">
                         <img src="images/filebridge.jpeg" alt="filebridge" class="project-img">
                     </a>
@@ -663,38 +591,7 @@
             </div>
             <div class="project">
                 <div class="experience-time">
-                    <a href="https://github.com/thatsBruno/pommy" target="_blank">
-                        <img src="images/pommy.jpeg" alt="pommy" class="project-img">
-                    </a>
-                </div>
-                <div class="experience-details">
-                    <strong>Pommy</strong><br>
-                    <small>
-                        Chrome extension with pomodoro timer and task list.
-                    </small>
-                    <small class="tech-label">Technologies: Javascript, Chrome Extensions</small>
-                    <!-- Added class for styling -->
-                </div>
-            </div>
-            <div class="project">
-                <div class="experience-time">
-                    <a href="https://github.com/thatsBruno/webscrapper" target="_blank">
-                        <img src="images/webscrapper.jpeg" alt="pommy" class="project-img">
-                    </a>
-                </div>
-                <div class="experience-details">
-                    <strong>Webscrapper</strong><br>
-                    <small>
-                        Webscrapper C# service.
-                        This service scans a website for links, and downloads excel file that then parses some of that
-                        files' data onto a csv file with different table formats.
-                    </small>
-                    <small class="tech-label">Technologies: C#, .NET</small> <!-- Added class for styling -->
-                </div>
-            </div>
-            <div class="project">
-                <div class="experience-time">
-                    <a href="https://github.com/thatsBruno/ProductStore-FE" target="_blank">
+                    <a href="https://github.com/thatsBruno/store-api" target="_blank">
                         <img src="images/products-app2.jpeg" alt="ecommerceBE" class="project-img">
                     </a>
                 </div>
@@ -725,22 +622,6 @@
                         getting the data to display to the user.
                     </small>
                     <small class="tech-label">Technologies: Angular, Typescript</small> <!-- Added class for styling -->
-                </div>
-            </div>
-            <div class="project">
-                <div class="experience-time">
-                    <a href="https://github.com/thatsBruno/chat-app" target="_blank">
-                        <img src="images/chatapp.jpeg" alt="chatapp" class="project-img">
-                    </a>
-                </div>
-                <div class="experience-details">
-                    <strong>Chat app</strong><br>
-                    <small>
-                        Very simple .NET/React chat application.
-                        .NET project using SignalR to perform Websocket connection web chat application.
-                    </small>
-                    <small class="tech-label">Technologies: .NET, React, SignalR</small>
-                    <!-- Added class for styling -->
                 </div>
             </div>
         </div>
